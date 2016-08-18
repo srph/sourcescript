@@ -1,0 +1,21 @@
+.btn {
+	@include u-fontMontserrat();
+	text-transform: uppercase;
+	letter-spacing: $btn-lineSpacing;
+}
+
+.btn--default {
+  @include button-variant($btn--default-color, $btn--default-bg, $btn--default-border);
+}
+
+/**
+ * Rounded buttons
+ */
+.btn--round {
+	@include btn--round();
+}
+
+.btn-sm,
+.btn-lg, {
+	font-size: $font-size-small;
+}

@@ -1,0 +1,17 @@
+@mixin u-marginVertical($margin) {
+	margin-top: $margin;
+	margin-bottom: $margin;
+}
+
+@mixin u-marginHorizontal($margin) {
+	margin-left: $margin;
+	margin-right: $margin;
+}
+
+@mixin u-centerElement() {
+	@include u-marginHorizontal(auto);
+}
+
+.u-centerElement {
+	@include u-centerElement();
+}

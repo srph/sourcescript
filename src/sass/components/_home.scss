@@ -1,0 +1,105 @@
+/**
+ * $home-color: basic & main color of the text
+ * 
+ */
+$home-color: #fff;
+
+// Variables for small screen devices
+$home-hMargin-sm: 0;
+$home-hSize-sm: 800%;
+$home-h1-sm: $home-hSize-sm;
+$home-h2-sm: ($home-hSize-sm / 2);
+$home-h3-sm: ($home-hSize-sm / 2.25);
+$home-h4-sm: ($home-hSize-sm / 3);
+$home-h5-sm: ($home-hSize-sm / 3.5);
+$home-h6-sm: ($home-hSize-sm / 4);
+
+// General variables
+$home-hMargin: 12px;
+$home-hSize: floor($home-hSize-sm / 3);
+$home-h1: $home-hSize;
+$home-h2: ($home-hSize / 1.5);
+$home-h3: ($home-hSize / 2);
+$home-h4: ($home-hSize / 3.5);
+$home-h5: ($home-hSize / 3);
+$home-h6: ($home-hSize / 3.5);
+$home-hlineHeight: 1;
+
+#home {
+	background-image: url(/src/img/sil.png);
+	background-position: center bottom;
+	background-repeat: repeat-x;
+
+}
+
+.home {
+	h1 { font-size: $home-h1; }
+	h2 { font-size: $home-h2; }
+	h3 { font-size: $home-h3; }
+	h4 { font-size: $home-h4; }
+	h5 { font-size: $home-h5; }
+	h6 { font-size: $home-h6; }
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@include u-marginVertical($home-hMargin);
+		line-height: $home-hlineHeight;
+	}
+
+	@media (min-width: $screen-sm-max) {
+		h1 { font-size: $home-h1-sm; }
+		h2 { font-size: $home-h2-sm; }
+		h3 { font-size: $home-h3-sm; }
+		h4 { font-size: $home-h4-sm; }
+		h5 { font-size: $home-h5-sm; }
+		h6 { font-size: $home-h6-sm; }
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			@include u-marginVertical($home-hMargin-sm);
+		}
+	}
+}
+
+
+// Main-text and sub-text
+// ---------------------------------
+$home-mainText-margin: -($home-hMargin / 2);
+$home-mainText-lineHeight: ($home-hlineHeight / 1.25);
+$home-mainText-sm-margin: $home-hMargin;
+$home-mainText-sm-lineHeight: $home-hlineHeight;
+
+.home .home-subText {
+
+	@include u-fontGeorgia();
+	@include opacity(0.75);
+	// color: $home-color;
+	line-height: 1;
+}
+
+.home .home-mainText {
+	margin-bottom: $home-mainText-margin;
+	@include u-fontMontserrat();
+	// color: $home-color;
+	line-height: $home-mainText-lineHeight;
+}
+
+.home .logo {
+	width: 15%;
+	@include u-marginVertical(20px);
+}
+
+@media (min-width: $screen-xs-max) {
+
+	.home .home-subText, {
+		@include u-marginVertical($home-mainText-sm-margin);
+	}
+}

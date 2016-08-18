@@ -1,0 +1,24 @@
+// Vendor files
+@import "../vendor/bootstrap-sass-official/assets/stylesheets/bootstrap";
+// @import "../vendor/jasny-bootstrap/scss/jasny-bootstrap";
+
+// Utilities
+@import "utils/zIndex";
+@import "utils/typography";
+@import "utils/colors";
+@import "utils/btn";
+@import "utils/bg";
+@import "utils/margin";
+
+// General
+@import "general/typography";
+@import "general/content";
+@import "general/navbar";
+@import "general/btn";
+
+// Component-specific classes
+@import "components/home";
+@import "components/about";
+@import "components/services";
+@import "components/footer";
+@import "components/google-maps";

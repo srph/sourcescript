@@ -1,0 +1,28 @@
+$footer-height: 75px;
+$footer-padding: $footer-height / 3;
+$footer-color: #fff;
+$footer-fontSize: 10px;
+$footer-letterSpacing: 2px;
+
+$footer-fontSize-sm: 12px;
+
+footer {
+	height: 75px;
+	width: 100%;
+	background: #000;
+	overflow: hidden;
+}
+
+footer .footer-inner {
+	@include u-fontMontserrat();
+	letter-spacing: 1px;
+	font-size: $footer-fontSize;
+	padding: $footer-padding;
+	color: $footer-color;
+}
+
+@media (min-width: $screen-xs-max) {
+	footer .footer-inner {
+		font-size: $footer-fontSize-sm;
+	}
+}

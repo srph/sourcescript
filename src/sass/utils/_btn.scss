@@ -1,0 +1,13 @@
+// button colors
+// ----------------------
+$btn-lineSpacing: 1px;
+
+$btn--default-color: #000;
+$btn--default-bg: #fff;
+$btn--default-border: $btn--default-bg;
+
+$btn--round-radius: 20px;
+
+@mixin btn--round() {
+	border-radius: 20px;
+}

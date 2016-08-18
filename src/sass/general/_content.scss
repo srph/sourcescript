@@ -1,0 +1,13 @@
+.content {
+	height: 100vh;
+	width: 100%;
+	padding: 50px;
+	background-color: #fff;
+
+	@include u-bgImgCover();
+	@include u-bgFixed();
+}
+
+.content--half {
+	height: 50vh;
+}

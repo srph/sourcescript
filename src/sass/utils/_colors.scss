@@ -1,0 +1,39 @@
+// basic colors
+// -------------------------
+// 
+// green,
+// red,
+// blue,
+// yellow,
+// dark tints,
+// light tints
+$differenceIntensity: 8%;
+
+$green: #00D172;
+$green--dark: darken($green, $differenceIntensity);
+$green--light: lighten($green, $differenceIntensity);
+
+// $red: ;
+// $red--light: ;
+// $red--dark: ;
+
+// $blue: ;
+// $blue--light: ;
+// $blue--dark: ;
+
+// $yellow: ;
+// $yellow--light: ;
+// $yellow--dark: ;
+
+// $dt: ;
+// $dt--light: ;
+// $dt--dark: ;
+
+// $lt: ;
+// $lt--light: ;
+// $lt--dark: ;
+
+// Default colors
+$default: $green;
+$default--dark: $green--dark;
+$default--light: $green--light;

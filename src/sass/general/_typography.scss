@@ -1,0 +1,12 @@
+body {
+  @include u-fontOpenSans();
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $text-color;
+  background-color: $body-bg;
+}
+
+p,
+blockquote, {
+	font-weight: $typeWeight-1;
+}

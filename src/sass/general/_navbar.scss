@@ -1,0 +1,10 @@
+.navbar-default {
+	background-color: #fff;
+}
+
+.navbar-brand {
+	@include u-fontMontserrat();
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	font-size: 14px;
+}

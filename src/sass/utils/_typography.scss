@@ -1,0 +1,157 @@
+// Font weight
+// --------------------
+$typeWeight-1: 	100;
+$typeWeight-2: 	200;
+$typeWeight-3: 	300;
+$typeWeight-4: 	400;
+$typeWeight-5: 	500;
+$typeWeight-6: 	600;
+$typeWeight-7: 	700;
+$typeWeight-8: 	800;
+$typeWeight-9: 	900;
+
+// Font weight utilities
+//
+.u-typeWeight--1 {
+	font-weight: $typeWeight-1;
+}
+.u-typeWeight--2 {
+	font-weight: $typeWeight-2;
+}
+.u-typeWeight--3 {
+	font-weight: $typeWeight-3;
+}
+.u-typeWeight--4 {
+	font-weight: $typeWeight-4;
+}
+.u-typeWeight--5 {
+	font-weight: $typeWeight-5;
+}
+.u-typeWeight--6 {
+	font-weight: $typeWeight-6;
+}
+.u-typeWeight--7 {
+	font-weight: $typeWeight-7;
+}
+.u-typeWeight--8 {
+	font-weight: $typeWeight-8;
+}
+.u-typeWeight--9 {
+	font-weight: $typeWeight-9;
+}
+
+
+// Font weight
+// --------------------
+// $letterSpacing-tightest: ;
+// $letterSpacing-tighter: ;
+// $letterSpacing-tight: ;
+// $letterSpacing-normal ;: ;
+// $letterSpacing-loose: ;
+// $letterSpacing-looser: ;
+
+// Font weight
+// --------------------
+// $lineHeight-tightest: ;
+// $lineHeight-tighter: ;
+// $lineHeight-tight: ;
+// $lineHeight-baseSans: ;
+// $lineHeight-base: ;
+// $lineHeight-loose: ;
+// $lineHeight-looser: ;
+
+// General paragraph variables
+// --------------------
+$p--fontSize: 14px;
+$p--lineHeight: floor( ($p--fontSize * $line-height-base) );
+
+// Mixin used to vertically center
+// text with the use of tables
+// ------------------------
+@mixin u-textVr() {
+	display: table;
+	height: 100%;
+	width: 100%;
+}
+@mixin u-textVr-text() {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+// Font family mixins
+// -------------------------
+@mixin u-fontMontserrat() {
+	font-family: "Montserrat";
+}
+@mixin u-fontTitillium() {
+	font-family: "Titillium Web";
+}
+@mixin u-fontOpenSans() {
+	font-family: "Open Sans", serif;
+}
+@mixin u-fontGeorgia() {
+	font-family: "Georgia", serif;
+}
+
+// Font family utilities
+// --------------------------
+.u-fontMontserrat {
+	@include u-fontMontserrat();
+}
+.u-fontTitillium {
+	@include u-fontTitillium();
+}
+.u-fontOpenSans {
+	@include u-fontOpenSans();
+}
+.u-fontGeorgia {
+	@include u-fontGeorgia();
+}
+
+
+/**
+ * Vertically aligns text with
+ * the use of tables
+ *
+ * Usage:
+ 	<.. class="textVr">
+ 		<.. class="u-textVr-text">
+ 		</..>
+ 	</..>
+ */
+.u-textVr {
+	@include u-textVr();
+
+	.u-textVr-text {
+		@include u-textVr-text();
+
+		&.u-textVr-text--bottom {
+			vertical-align: bottom;
+		}
+	}
+}
+
+/**
+ * Uppercases text
+ */
+.u-uppercase {
+	text-transform: uppercase;
+}
+
+/**
+ * Utility for italicizing text
+ */
+.u-italic {
+	font-style: italic;
+}
+
+/**
+ * Lowercases text
+ */
+.u-lowercase {
+	text-transform: lowercase;
+}
+
+.u-iconNoLineHeight {
+	line-height: 0;
+}

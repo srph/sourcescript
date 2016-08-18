@@ -1,0 +1,17 @@
+@mixin u-bgFixed() {
+	background-attachment: fixed;
+}
+
+@mixin u-bgImgCover() {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.u-bgImgCover {
+	@include u-bgImgCover();
+}
+
+.u-bgFixed {
+	@include u-bgFixed();
+}
